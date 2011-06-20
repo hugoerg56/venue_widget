@@ -1,6 +1,6 @@
 body {
 	width: 100%;
-	background-image: url('images/bg.jpg');
+	background-image: url('/images/bg.jpg');
 	background-repeat: repeat-x;
 }
 
@@ -10,7 +10,7 @@ body {
 }
 
 #wrapper {
-	width: 1024px;
+	width: 1014px;
 	margin: 0 auto;
 }
 
@@ -23,7 +23,7 @@ body {
 	width: 380px;
 	float: right;
 	background-color: white;
-	margin-right: 145px;
+	margin-right: 125px;
 	margin-top: 20px;
 	padding:20px 0 20px 25px;	
 	border: 1px solid #ccc;
@@ -90,17 +90,17 @@ input {
 }
 
 h1 {
-	font-family: helvetica, arial;
-	font-size: 35px;
+    font-family: "ostrich-sans-rounded-1","ostrich-sans-rounded-2";
+  	font-size: 53px;
 	color: black;
-	font-weight: lighter;
+	font-weight: 100%;
 }
 
 #pitch{
 	width: 400px;
 	float: right;
 	margin-top: 30px;
-	margin-right: 150px;
+	margin-right: 130px;
 }
 
 .button {
@@ -134,7 +134,7 @@ h1 {
 }
 
 #dont_know {
-	width: 539px;
+	width: 804px;
 	
 	
 }
