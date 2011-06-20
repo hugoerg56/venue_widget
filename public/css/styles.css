@@ -10,7 +10,7 @@ body {
 }
 
 #wrapper {
-	width: 1014px;
+	width: 1004px;
 	margin: 0 auto;
 }
 
@@ -23,7 +23,7 @@ body {
 	width: 380px;
 	float: right;
 	background-color: white;
-	margin-right: 125px;
+	margin-right: 95px;
 	margin-top: 20px;
 	padding:20px 0 20px 25px;	
 	border: 1px solid #ccc;
@@ -59,9 +59,9 @@ input {
    width:60%;
    height:20%;
    max-width:300px;
-   -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.4);
-   -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.4);
-   box-shadow:0 15px 10px rgba(0, 0, 0, 0.4);
+   -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+   -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+   box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
    -webkit-transform:rotate(-3deg);
    -moz-transform:rotate(-3deg);
    -o-transform:rotate(-3deg);
@@ -100,41 +100,91 @@ h1 {
 	width: 400px;
 	float: right;
 	margin-top: 30px;
-	margin-right: 130px;
+	margin-right: 100px;
 }
 
 .button {
-    font-size: 20px;
-    text-shadow: #444 0.09em 0.09em 0.09em;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: #920101 0.07em 0.07em 0.07em;
     font-family: helvetica, arial;
     color: white;
-    -moz-border-radius: 10px; /* Firefox */
-    -webkit-border-radius: 10px; /* Safari, Chrome */
-    border-radius: 10px; /* CSS3 */
-    width: 50%;
-    height: 40px;	
-    margin: 20px 0 0 70px;
-	border: 1px solid #ee4128;
+    -moz-border-radius: 25px; /* Firefox */
+    -webkit-border-radius: 25px; /* Safari, Chrome */
+    border-radius: 25px; /* CSS3 */
+    width: 65%;
+    height: 50px;	
+    margin: 20px 0 0 50px;
+	border: 3px solid #fc8686;
+    padding: 0 0 1px 0;
+    letter-spacing: -0.75px;
 
-	background: #ee4128; /* for non-css3 browsers */
-
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee4128', endColorstr='#f67c2c'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#ee4128), to(#f67c2c)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #ee4128,  #f67c2c); /* for firefox 3.6+ */ 
+	background: #e82727; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e82727', endColorstr='#ab0503'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#e82727), to(#ab0503)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #e82727,  #ab0503); /* for firefox 3.6+ */ 
 
 }
 
 .button:hover {
-	background: black; /* for non-css3 browsers */
+	background: #ab0503; /* for non-css3 browsers */
 
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444', endColorstr='black'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#444), to(black)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #444,  black); /* for firefox 3.6+ */ 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ab0503', endColorstr='#e82727'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ab0503), to(#e82727)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ab0503,  #e82727); /* for firefox 3.6+ */ 
 	
 }
 
 #dont_know {
 	width: 804px;
-	
-	
+	margin-top:25px;	
+}
+
+#whatwedo {
+	margin: 20px 0;
+	float: left;
+	width: 455px;
+	height: 290px;
+}
+
+#whatwedo h1, #likeidea h1{
+  color: white;	
+}
+
+#likeidea {
+	float: right;
+	margin: 20px 120px 0 0 ;
+	width: 380px;
+}
+
+#likeidea_img {
+	float: left;
+	width: 120px;	
+}
+
+#likeidea_txt {
+	float: right;
+	width: 260px;
+	margin-top: 10px;
+	line-height: 20px;
+}
+
+#likeidea a {
+	color: white;
+	font-family: "adelle-1","adelle-2";
+	font-size: 18px;
+}
+
+#likeidea a:hover {
+	color: #ab0503;
+}
+
+#likeidea p, #whatwedo p {
+	font-family: arial;
+	color: white;
+	font-weight: lighter;
+}
+
+#whatwedo p {
+	line-height: 23px;
 }
