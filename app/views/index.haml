@@ -1,0 +1,20 @@
+#wrapper
+  #logo
+    %img{:src => 'images/logo.png'}
+
+  #video
+    <iframe width="435" height="359" src="http://www.youtube.com/embed/irjgfW0BIrw" frameborder="0" allowfullscreen></iframe>
+
+  #pitch
+    %h1 Don't forget to track your metrics over time
+
+  #form
+    %form{:action => '', :method => 'post'}
+      %input{:type => 'text', :name => 'url', :class => 'in_form', :value => 'Your URL', :onfocus => 'if(this.value==this.defaultValue)this.value="";', :onblur => 'if(this.value=="")this.value=this.defaultValue;'}    
+      %br
+      %input{:type => 'text', :name => 'email', :class => 'in_form', :value => 'Your email address', :onfocus => 'if(this.value==this.defaultValue)this.value="";', :onblur => 'if(this.value=="")this.value=this.defaultValue;'}    
+      %br
+      %input{:type => 'submit', :name => 'submit', :class => 'button', :value => 'Start tracking'}
+
+  #dont_know
+    %img{:src => 'images/dont_know.png'}
