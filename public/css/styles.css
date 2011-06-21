@@ -135,9 +135,31 @@ h1 {
 	
 }
 
+#disclaimer {
+	float: left;
+	margin-top: 20px;
+	height: 42px;
+	width: 465px;
+	background-image: url('/images/ribbon.png');
+	padding-top: 8px;	
+}
+
+#disclaimer p, #disclaimer a {
+	font-family: helvetica, arial;
+	font-size: 10px;
+	color: #2d1701;
+	text-align: center;
+	letter-spacing: 0.95px;
+}
+
+#disclaimer a {
+	margin-left: 80px;
+}
+
 #dont_know {
-	width: 804px;
-	margin-top:25px;	
+	float: right;
+	margin-right: 120px;
+	width: 413px;
 }
 
 #whatwedo {
@@ -153,7 +175,7 @@ h1 {
 
 #likeidea {
 	float: right;
-	margin: 20px 120px 0 0 ;
+	margin: 10px 120px 0 0 ;
 	width: 380px;
 }
 
