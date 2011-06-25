@@ -201,7 +201,7 @@ h1 {
 	color: #ab0503;
 }
 
-#likeidea p, #whatwedo p {
+#likeidea p, #whatwedo p,  {
 	font-family: arial;
 	color: white;
 	font-weight: lighter;
@@ -209,4 +209,36 @@ h1 {
 
 #whatwedo p {
 	line-height: 23px;
+}
+
+/*	THANK YOU  */
+
+#thankyou {
+	width: 600px;
+	margin: 50px auto;
+}
+
+#thankyou p {
+	font-family: arial;
+	color: black;
+	font-weight: lighter;
+	font-size: 18px;
+	text-align: justify;
+}
+
+#pay_social {
+	float: left;
+	margin-top: 30px;
+	
+}
+
+#thankyou_left {
+	float: left;
+	width: 280px;
+}
+
+#thankyou_right {
+	float: right;
+	width: 290px;
+	margin-top: -34px;
 }

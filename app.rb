@@ -29,6 +29,10 @@ class Arminder < Sinatra::Base
     def partial(page)
       haml page, :layout => false
     end
+    
+    def erb_partial(page)
+      erb page, :layout => false
+    end
   end
     
   set :public, File.join(File.dirname(__FILE__), 'public')
@@ -48,6 +52,11 @@ class Arminder < Sinatra::Base
   #-->> INDEX PAGE
   get '/' do 
     haml :index
+  end
+
+  #-->> THANK YOU
+  get '/thankyou' do 
+    haml :thankyou
   end
 
 

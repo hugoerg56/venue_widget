@@ -1,6 +1,4 @@
 #wrapper
-  #logo
-    %img{:src => 'images/logo.png'}
 
   #video
     <iframe width="455" height="359" src="http://www.youtube.com/embed/irjgfW0BIrw" frameborder="0" allowfullscreen></iframe>
@@ -14,7 +12,8 @@
       %br
       %input{:type => 'text', :name => 'email', :class => 'in_form', :value => 'Your email address', :onfocus => 'if(this.value==this.defaultValue)this.value="";', :onblur => 'if(this.value=="")this.value=this.defaultValue;'}    
       %br
-      %input{:type => 'submit', :name => 'submit', :class => 'button', :value => 'Start tracking'}
+      %a{:href => "/thankyou"}
+        %input{:type => 'submit', :name => 'submit', :class => 'button', :value => 'Start tracking'}
 
   #dont_know
     %img{:src => 'images/dont_know.png'}
