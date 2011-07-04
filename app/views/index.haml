@@ -7,13 +7,12 @@
     %h1 Don't forget to track your metrics over time
 
   #form
-    %form{:action => '', :method => 'post'}
+    %form{:action => '/thankyou', :method => 'post'}
       %input{:type => 'text', :name => 'url', :class => 'in_form', :value => 'http://www.yourwebsite.com', :onfocus => 'if(this.value==this.defaultValue)this.value="";', :onblur => 'if(this.value=="")this.value=this.defaultValue;'}    
       %br
       %input{:type => 'text', :name => 'email', :class => 'in_form', :value => 'Your email address', :onfocus => 'if(this.value==this.defaultValue)this.value="";', :onblur => 'if(this.value=="")this.value=this.defaultValue;'}    
       %br
-      %a{:href => "/thankyou"}
-        %input{:type => 'submit', :name => 'submit', :class => 'button', :value => 'Start tracking'}
+      %input{:type => 'submit', :name => 'submit', :class => 'button', :value => 'Start tracking'}
 
   #dont_know
     %img{:src => 'images/dont_know.png'}

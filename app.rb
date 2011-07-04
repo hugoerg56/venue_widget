@@ -3,6 +3,7 @@ require 'sinatra'
 require 'json'
 require 'haml'
 require 'uri'
+require 'mongoid'
 
 begin
   # Require the preresolved locked set of gems.
@@ -12,59 +13,53 @@ rescue LoadError
   require "rubygems"
   require "bundler"
   Bundler.setup
+
+end
+
+Mongoid.configure do |config|
+  config.master = Mongo::Connection.new.db("aarrr")
 end
 
 
-  #-->> REQUIRE MODEL FILES
-  #models = ['accounts', 'users', 'messages', 'rooms', 'invitacions']
-  #models.each do |i|
-  #  require File.dirname(__FILE__) + "/app/models/"+i+".rb"
-  #end
+
+class Website 
+  include Mongoid::Document
+end
 
 
-class Arminder < Sinatra::Base
+class Aarrrminder < Sinatra::Base
 
- #---------------------------- CONFIG ----------------------------  
+  enable :sessions
+
   helpers do
     def partial(page)
       haml page, :layout => false
     end
-    
     def erb_partial(page)
       erb page, :layout => false
     end
   end
-    
+
   set :public, File.join(File.dirname(__FILE__), 'public')
   set :views, File.join(File.dirname(__FILE__), '/app/views')
-  
   configure do
     set :views, "#{File.dirname(__FILE__)}/app/views"
   end
 
-  enable :sessions
- # //---------------------------- CONFIG ----------------------------
-
-
- #---------------------------- PAGES ----------------------------
- 
- 
-  #-->> INDEX PAGE
-  get '/' do 
+  get '/' do
     haml :index
   end
 
-  #-->> THANK YOU
-  get '/thankyou' do 
+  get '/thankyou' do
     haml :thankyou
   end
 
-
-
-end #end
-
-
-
-
-
-
+  post '/thankyou' do
+    website = Website.create(params)
+    if website.save
+      haml :thankyou
+    else
+      erb "There was an error"
+    end
+  end
+end

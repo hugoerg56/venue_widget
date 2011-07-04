@@ -1,0 +1,7 @@
+test:
+  host: localhost
+  database: aarrr_test
+
+development:
+  host: localhost
+  database: aarrr_development
