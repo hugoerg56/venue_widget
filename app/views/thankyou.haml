@@ -1,9 +1,13 @@
 #wrapper
-  #thankyou
-    %h1 THANK YOU.
+  #thankyou_left
+    %h1 MUY FACIL.
+    %p Sólo debes copiar y pegar este código en tu página web. Asegúrate que lo estas agregando en los tags del &#60;head&#62;
     %br
-    #thankyou_left
-      %p We are in private beta, however you can hustle your way in paying with a tweet.
-      = erb_partial :pay_with_social
-    #thankyou_right
-      %img{:src => '/images/pirate.png'}
+    .link
+      %a{:href => "mailto: info@esturisti.co", :target => "blank", :style => "margin-left: -100px;"}¿No entiendes cómo instalar la cortina?
+    
+  #thankyou_right
+    %form 
+      %input{:type => "text", :name => "fname"}
+	
+

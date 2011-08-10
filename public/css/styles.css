@@ -113,11 +113,11 @@ p {
     -moz-border-radius: 30px; /* Firefox */
     -webkit-border-radius: 30px; /* Safari, Chrome */
     border-radius: 30px; /* CSS3 */
-    width: 80%;
+    width: 78%;
     height: 40px;	
     margin: 20px 0 0 0px;
 	border: 3px solid #fc8686;
-    padding: 10px 0 1px 25px;
+    padding: 10px 0 1px 45px;
     letter-spacing: -0.75px;
 
 	background: #e82727; /* for non-css3 browsers */
@@ -133,6 +133,18 @@ p {
     color: white;
     text-decoration: none;
     
+}
+.link {
+	margin-top: 6px;
+	width: 100%;
+	padding-left: 100px;
+	
+}
+
+.link a {
+	font-family: 'helvetica', 'arial';
+	color: #ab0503;
+	font-size: 14px;
 }
 
 .button:hover {
@@ -251,11 +263,6 @@ p {
 
 /*	THANK YOU  */
 
-#thankyou {
-	width: 600px;
-	margin: 50px auto;
-}
-
 #thankyou p {
 	font-family: arial;
 	color: black;
@@ -272,11 +279,19 @@ p {
 
 #thankyou_left {
 	float: left;
-	width: 280px;
+	width: 290px;
 }
 
 #thankyou_right {
 	float: right;
-	width: 290px;
-	margin-top: -34px;
+	margin-top: 130px;
+}
+
+input {
+	width: 650px;
+	height: 50px;
+}
+
+#thankyou_left h1 {
+	margin: 50px 0 25px 0;
 }
