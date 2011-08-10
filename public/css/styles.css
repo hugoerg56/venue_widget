@@ -16,7 +16,7 @@ body {
 
 #logo {
 	width: 404px;
-	margin: 20px 0 0 0;
+	margin: 10px 0 0 0;
 	}
 
 #form {
@@ -91,39 +91,48 @@ input {
 
 h1 {
     font-family: "ostrich-sans-rounded-1","ostrich-sans-rounded-2";
-  	font-size: 53px;
+  	font-size: 60px;
 	color: black;
 	font-weight: 100%;
 }
 
 #pitch{
-	width: 400px;
+	width: 420px;
 	float: right;
 	margin-top: 30px;
-	margin-right: 100px;
+	margin-right: 60px;
+	height: 380px;
 }
 
+p {
+	font-family: arial;
+	line-height: 25px;
+	text-align: justify;
+}
 .button {
-    font-size: 25px;
-    font-weight: bold;
-    text-shadow: #920101 0.07em 0.07em 0.07em;
-    font-family: helvetica, arial;
-    color: white;
-    -moz-border-radius: 25px; /* Firefox */
-    -webkit-border-radius: 25px; /* Safari, Chrome */
-    border-radius: 25px; /* CSS3 */
-    width: 65%;
-    height: 50px;	
-    margin: 20px 0 0 50px;
+    -moz-border-radius: 30px; /* Firefox */
+    -webkit-border-radius: 30px; /* Safari, Chrome */
+    border-radius: 30px; /* CSS3 */
+    width: 80%;
+    height: 40px;	
+    margin: 20px 0 0 0px;
 	border: 3px solid #fc8686;
-    padding: 0 0 1px 0;
+    padding: 10px 0 1px 25px;
     letter-spacing: -0.75px;
 
 	background: #e82727; /* for non-css3 browsers */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e82727', endColorstr='#ab0503'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#e82727), to(#ab0503)); /* for webkit browsers */
 	background: -moz-linear-gradient(top,  #e82727,  #ab0503); /* for firefox 3.6+ */ 
+}
 
+.button a {
+	font-size: 25px;
+	font-weight: bold;
+	text-shadow: #920101 0.07em 0.07em 0.07em;
+    color: white;
+    text-decoration: none;
+    
 }
 
 .button:hover {
@@ -150,6 +159,7 @@ h1 {
 	color: #2d1701;
 	text-align: center;
 	letter-spacing: 0.95px;
+	line-height: 13px;
 }
 
 #disclaimer a {
@@ -163,14 +173,42 @@ h1 {
 }
 
 #whatwedo {
-	margin: 20px 0;
+	margin: 20px 0 150px 0 ;
 	float: left;
-	width: 455px;
+	width: 100%;
 	height: 290px;
+}
+
+#whatwedo_left {
+	width: 300px;
+	float: left;
+	height: 20px;
+	background-color: black;
+	margin-top: 20px;
+}
+
+#whatwedo_right {
+    width: 300px;
+    float: right;
+    height: 20px;
+    background-color: black;	
+    margin-left: 50px;
+	margin-top: 20px;
+}
+
+#whatwedo img {
+	border: 1px solid #999;
 }
 
 #whatwedo h1, #likeidea h1{
   color: white;	
+}
+
+#whatwedo p {
+	font-family: helvetica, arial;
+	color: white;
+	font-weight: lighter;
+	margin: 15px 0;
 }
 
 #likeidea {

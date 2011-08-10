@@ -1,43 +1,28 @@
 #wrapper
 
   #video
-    <iframe width="455" height="359" src="http://www.youtube.com/embed/irjgfW0BIrw" frameborder="0" allowfullscreen></iframe>
+    <iframe src="http://player.vimeo.com/video/26282052?title=0&amp;byline=0&amp;portrait=0" width="455" height="359" frameborder="0"></iframe>
 
   #pitch
-    %h1 Don't forget to track your metrics over time
-
-  #form
-    %form{:action => '', :method => 'post'}
-      %input{:type => 'text', :name => 'url', :class => 'in_form', :value => 'http://www.yourwebsite.com', :onfocus => 'if(this.value==this.defaultValue)this.value="";', :onblur => 'if(this.value=="")this.value=this.defaultValue;'}    
-      %br
-      %input{:type => 'text', :name => 'email', :class => 'in_form', :value => 'Your email address', :onfocus => 'if(this.value==this.defaultValue)this.value="";', :onblur => 'if(this.value=="")this.value=this.defaultValue;'}    
-      %br
-      %a{:href => "/thankyou"}
-        %input{:type => 'submit', :name => 'submit', :class => 'button', :value => 'Start tracking'}
-
-  #dont_know
-    %img{:src => 'images/dont_know.png'}
-  
-  #disclaimer 
-    %p DAVE MC CLURE HAS NO CONNECTION TO THE CREATION OF THIS PRODUCT. 
-    %a{:href => "mailto:'ivan@bakedweb.net'"} HOWEVER IF YOU ARE DAVE MC CLURE DROP US A LINE.
+    %h1 Conoce la gente que visita tu pagina web.
+    %p ¿Sabes quien visita tu página web? ¿Puedes hacer seguimiento con esta gente? ¿Cómo brindar una experiencia más personalizada a tus usuarios? Teniendo la cortina en tu página web tendrás toda esta información de tus usuarios y mucho más...
+    .button
+      %a{:href => "/thankyou"}Crea tu cuenta GRATIS
   
   #whatwedo 
     %h1 
-      What we do.
-    %img{:src => "images/screens.png"}
-    %p 
-      We take screenshots of your app, so that you can track the success of your design changes. You can also track your AARRR metrics over time and make data driven decisions.
-  
-  #likeidea
-    %h1
-      Like this idea?
-    #likeidea_img
-      %img{:src => 'images/envelope.png'}
+      Que es la cortina?
+    #whatwedo_left
+      %img{:src => "images/product_1.png"}
+      %p Registro con cuenta de Facebook.
+      %p Aseguramos que tus visitas se registren antes de entrar en tu página web. 
+    #whatwedo_right
+      %img{:src => "images/product_3.png"}
+      %p Notificaciones al email y administrador.
+      %p Aqui puedes ver toda la informacion de tus visitas.
 
-    #likeidea_txt
-      %a{:href => 'mailto: ivan@bakedweb.net'}
-        Drop us a line.<br/>
-        
-      %p
-        We are in beta testing and would love to hear from you.
+    #whatwedo_right
+      %img{:src => "images/product_2.png"}
+      %p Permiso.
+      %p Tu usuario nos a permiso a accesar su información de Facebook.
+  .clear
