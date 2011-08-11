@@ -1,17 +1,16 @@
 #wrapper
   #thankyou_left
-    %h1 ¿Cual es tu pagina?
+    %h1 ¿Cual es tupagina web?
     %input{:value => "http://www.tupagina.com"}
     %br
-    .link.ayuda
-      %a{:href => "mailto: info@esturisti.co", :target => "blank", :style => "margin-left: -100px;"}¿Necesitas ayuda instalando la cortina?
     
   #video_instalacion
     <iframe src="http://player.vimeo.com/video/26282052?title=0&amp;byline=0&amp;portrait=0" width="455" height="359" frameborder="0"></iframe>
 
 
-  #thankyou_right
-    %h1 Pega este codigo en tu pagina
+  #thankyou_left
+    %h1{:style => "font-size: 2.7em;"} Pega este codigo en tu pagina web.
+
     .pega_code
       %p &#60;script&#62;
       %p  Esturistico = new Object()
@@ -19,3 +18,5 @@
       %p  Esturistico.redirect = "bakedweb.net";
       %p &#60;/script&#62;
       %p &#60;script src="http://www.esturisti.co/javascripts/cortina_external.js" &#62;
+    .link
+      %a{:href => "mailto: info@esturisti.co", :target => "blank" }¿Necesitas ayuda instalando la cortina?
