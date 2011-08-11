@@ -49,8 +49,13 @@ input {
     border: 1px solid #ccc;
 }
 
+#video_instalacion {
+	position: relative;
+	float: right;
+}
+
 #video:before,
-#video:after {
+#video:after, #video_instalacion:before, #video_instalacion:after {
    content:"";
    position:absolute;
    z-index:-1;
@@ -68,7 +73,7 @@ input {
    transform:rotate(-3deg);
 }
 
-#video:after{
+#video:after, #video_instalacion:after{
    right:10px;
    left:auto;
    -webkit-transform:rotate(3deg);
@@ -135,7 +140,7 @@ p {
     
 }
 .link {
-	margin-top: 6px;
+	margin: 0px 0 20px 0;
 	width: 100%;
 	padding-left: 100px;
 	
@@ -279,7 +284,7 @@ p {
 
 #thankyou_left {
 	float: left;
-	width: 700;
+	width: 500px;
 }
 
 #thankyou_right {
@@ -302,12 +307,17 @@ p {
 .pega_code{
   padding: 10px;
   background: white;
-  opacity:0.85;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 
 input {
-	width: 350px;
-	height: 50px;
+	width: 480px;
+	height: 40px;
+	font-size: 18px;
+	font-family: times;
+	color: #7f7f7f;
+	font-style: italic;
 }
 
 #thankyou_left h1 {
