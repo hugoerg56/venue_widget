@@ -17,20 +17,20 @@ rescue LoadError
 end
 
 
-Mongoid.configure do |config|
-  config.master = Mongo::Connection.new.db("aarrr")
-end
+#Mongoid.configure do |config|
+#  config.master = Mongo::Connection.new.db("aarrr")
+#end
 
 
 
-class Website 
-  include Mongoid::Document
+#class Website 
+#  include Mongoid::Document
 
-  field :email
+#  field :email
 
-  validates_presence_of :email
+#  validates_presence_of :email
 
-end
+#end
 
 
 class Aarrrminder < Sinatra::Base
@@ -61,7 +61,7 @@ class Aarrrminder < Sinatra::Base
   end
 
   post '/thankyou' do
-    website = Website.create(params)
+#    website = Website.create(params)
 
     if website.save
       haml :thankyou
