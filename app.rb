@@ -16,6 +16,7 @@ rescue LoadError
 
 end
 
+
 Mongoid.configure do |config|
   config.master = Mongo::Connection.new.db("aarrr")
 end
@@ -24,6 +25,11 @@ end
 
 class Website 
   include Mongoid::Document
+
+  field :email
+
+  validates_presence_of :email
+
 end
 
 
@@ -56,10 +62,11 @@ class Aarrrminder < Sinatra::Base
 
   post '/thankyou' do
     website = Website.create(params)
+
     if website.save
       haml :thankyou
     else
-      erb "There was an error"
+      render :text => "Error with email"
     end
   end
 end

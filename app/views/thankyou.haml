@@ -1,9 +1,21 @@
 #wrapper
-  #thankyou
-    %h1 THANK YOU.
+  #thankyou_left
+    %h1 ¿Cual es tu pagina?
+    %input{:value => "http://www.tupagina.com"}
     %br
-    #thankyou_left
-      %p We are in private beta, however you can hustle your way in paying with a tweet.
-      = erb_partial :pay_with_social
-    #thankyou_right
-      %img{:src => '/images/pirate.png'}
+    .link.ayuda
+      %a{:href => "mailto: info@esturisti.co", :target => "blank", :style => "margin-left: -100px;"}¿Necesitas ayuda instalando la cortina?
+    
+  #video_instalacion
+    <iframe src="http://player.vimeo.com/video/26282052?title=0&amp;byline=0&amp;portrait=0" width="455" height="359" frameborder="0"></iframe>
+
+
+  #thankyou_right
+    %h1 Pega este codigo en tu pagina
+    .pega_code
+      %p &#60;script&#62;
+      %p  Esturistico = new Object()
+      %p  Esturistico.tag = "bakedweb";
+      %p  Esturistico.redirect = "bakedweb.net";
+      %p &#60;/script&#62;
+      %p &#60;script src="http://www.esturisti.co/javascripts/cortina_external.js" &#62;

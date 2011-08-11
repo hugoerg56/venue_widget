@@ -4,6 +4,7 @@ require 'capybara'
 require 'capybara/dsl'
 require  File.expand_path('app')
 
+
 class AarrrminderTest < Test::Unit::TestCase
 
   include Capybara
@@ -29,6 +30,14 @@ class AarrrminderTest < Test::Unit::TestCase
   def test_inserts_new_record_at_registering
     register_on_the_site
     assert_equal 1, Website.all.size
+  end
+
+  def test_error_when_no_email
+    visit '/'
+    fill_in "url", :with => "htttp:://www.esturisti.co"
+    click_on("Start tracking")
+    save_and_open_page
+    assert_equal true, page.has_content?("Error with email")
   end
 
 end
