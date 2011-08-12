@@ -4,8 +4,12 @@ $(document).ready(function() {
   $('.ayuda').hide();
 
   $('#btn_generar_cod').click(function(){
-	generate_code($('#tu_pagina').val());
-    $('#thankyou_right').slideDown();
+	if ($('#tu_pagina').val() == "http://www.tupagina.com"){
+	  alert("Necesitamos la direccion de tu pagina web!");
+	}else{
+	  generate_code($('#tu_pagina').val());
+	  $('.code_generated').slideDown();	
+	}
   }); 
 
   //actualiza script
