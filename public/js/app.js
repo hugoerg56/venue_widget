@@ -25,7 +25,7 @@ function generate_code(valor){
 	codigo += '<p>Esturistico.tag = "' + get_tag(valor) + '"&#59; </p>';
 	codigo += '<p>Esturistico.redirect = "' + get_redirect(valor) + '"&#59; </p>';	
 	codigo += '<p>&#60;/script&#62;</p>';
-	codigo += '<p>&#60;script src="http://www.esturisti.co/javascripts/cortina_external.js" &#62;</p>';
+	codigo += '<p>&#60;script src="http://www.esturisti.co/javascripts/cortina_external.js" &#62;</p><p>&#60;/script&#62;</p>';
 	$('.pega_code').html(codigo);
 }
 
@@ -35,5 +35,5 @@ function get_tag(url){
 }
 
 function get_redirect(url){
-	return url.replace("http://", "").replace("www.","").replace(" ", ""); //remuevo dato inecesario del url
+	return url.replace("http://", "").replace(" ", ""); //remuevo dato inecesario del url
 }
