@@ -16,26 +16,7 @@ rescue LoadError
 
 end
 
-
-#Mongoid.configure do |config|
-#  config.master = Mongo::Connection.new.db("aarrr")
-#end
-
-
-
-#class Website 
-#  include Mongoid::Document
-
-#  field :email
-
-#  validates_presence_of :email
-
-#end
-
-
-class Aarrrminder < Sinatra::Base
-
-  enable :sessions
+class RivieraExperience < Sinatra::Base
 
   helpers do
     def partial(page)
@@ -56,17 +37,4 @@ class Aarrrminder < Sinatra::Base
     haml :index
   end
 
-  get '/thankyou' do
-    haml :thankyou
-  end
-
-  post '/thankyou' do
-#    website = Website.create(params)
-
-    if website.save
-      haml :thankyou
-    else
-      render :text => "Error with email"
-    end
-  end
 end

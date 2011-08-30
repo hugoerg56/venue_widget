@@ -1,7 +1,7 @@
 test:
   host: localhost
-  database: aarrr_test
+  database: riviera_test
 
 development:
   host: localhost
-  database: aarrr_development
+  database: riviera_development

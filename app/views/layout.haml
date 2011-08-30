@@ -1,19 +1,17 @@
-!!!
-%HTML{:lang => "en", :style => "zoom: 100%; "}
-  %HEAD
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    %title Esturisti.co Cortina
-    %link{:href => "/css/styles.css", :rel => "stylesheet", :type => "text/css"} 
-    %link{:href=>"/images/favicon.png", :rel =>"Shortcut Icon"}
-    %script{:charset => "utf-8", :src => "/js/jquery-min.js"}
-    %script{:charset => "utf-8", :src => "/js/app.js"}
-    %script{:type => "text/javascript", :src => "http://use.typekit.com/zno7dyx.js" }
-    %script{:type => "text/javascript"}try{Typekit.load();}catch(e){}
+!!! Strict
+%html
+  %head
+    %title Esturisti.co 
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+    %link{:rel => "shotcut icon", :href => "/images/icono.png"}
 
-  %body
-    #wrapper
-      #logo
-        %img{:src => 'images/logo.png'}
-
-    = yield 
+    = stylesheet_link_tag 'default.css', 'styles.css'
+    = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'
+    = javascript_include_tag 'riviera_experience', 'jquery.gamequery-0.5.1'
+    = hoptoad_javascript_notifier 
   
+  %body
+    = yield
+
+
+
