@@ -4,12 +4,11 @@
     %title Esturisti.co 
     %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
     %link{:rel => "shotcut icon", :href => "/images/icono.png"}
+    %link{:href=>"/css/styles.css", :rel =>"Shortcut Icon"}
+    %script{:charset => "utf-8", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"}
+    %script{:charset => "utf-8", :src => "/js/app.js"}
+    %script{:charset => "utf-8", :src => "/js/lib/jquery.gamequery-0.5.1.js"}
 
-    = stylesheet_link_tag 'default.css', 'styles.css'
-    = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'
-    = javascript_include_tag 'riviera_experience', 'jquery.gamequery-0.5.1'
-    = hoptoad_javascript_notifier 
-  
   %body
     = yield
 
