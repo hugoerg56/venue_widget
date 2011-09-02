@@ -16,7 +16,7 @@ rescue LoadError
 
 end
 
-class RivieraExperience < Sinatra::Base
+class VenueWidget < Sinatra::Base
 
   helpers do
     def partial(page)

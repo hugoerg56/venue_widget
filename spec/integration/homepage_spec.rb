@@ -5,13 +5,13 @@ require 'capybara/dsl'
 require  File.expand_path('app')
 
 
-class RivieraExperienceTest < Test::Unit::TestCase
+class VenueWidgetTest < Test::Unit::TestCase
 
   include Capybara
 
   def setup
     Website.destroy_all
-    Capybara.app = RivieraExperience
+    Capybara.app = VenueWidget
   end
 
   def test_homepage
