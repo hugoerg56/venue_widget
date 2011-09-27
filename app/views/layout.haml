@@ -3,9 +3,13 @@
   %head
     %title Venue Widget
     %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
-    %link{:href=>"/css/styles.css", :rel =>"Shortcut Icon"}
+    %link{:type => "text/css", :rel => "stylesheet", :href => "/css/styles.css"}
     %script{:charset => "utf-8", :src => "/js/lib/jquery.js"}
+    %script{:charset => "utf-8", :src => "/js/lib/jquery.tablesorter.js"}
+    %script{:charset => "utf-8", :src => "/js/lib/jquery.colorize-2.0.0.js"}
+    %script{:charset => "utf-8", :src => "/js/app.js"}
     %script{:charset => "utf-8", :src => "/js/widget.js"}
+
 
   %body
     = yield
