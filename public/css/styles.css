@@ -1,0 +1,21 @@
+#wrapper{
+  width: 751px; 
+  margin: auto;
+}
+
+#loading{
+  display: none;
+}
+
+#main_table tr td{
+  padding: 2px;
+}
+
+#selectevent_columnlabelbar{
+  margin-top: 20px;
+}
+
+#selectevent_columnlabelbar table{
+  background-color: #A9BBD7;
+}
+
