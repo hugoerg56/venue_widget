@@ -7,7 +7,6 @@
     VenueDriver.VENUE_URL = "http://" + VenueDriver.host + "/api/accounts/44/all_events?token=" + VenueDriver.API_TOKEN + "&callback=?";
     VenueDriver.venues_list = new Array();
     VenueDriver.prototype.venues = function() {
-      $("#loading").css('display', '');
       $.getJSON(VenueDriver.VENUE_URL, function(data) {
         $('#main_table').append("<tbody></tbody>");
         $.each(data, function(i, item) {
