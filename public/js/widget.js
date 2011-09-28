@@ -1,5 +1,5 @@
+var VenueDriver;
 (function() {
-  var VenueDriver;
   VenueDriver = (function() {
     function VenueDriver() {}
 
