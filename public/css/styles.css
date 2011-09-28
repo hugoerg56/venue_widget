@@ -1,5 +1,9 @@
 #wrapper{
-  width: 751px; 
+  width: 100%; 
+}
+
+#center_table{
+  width: 90%;
   margin: auto;
 }
 
