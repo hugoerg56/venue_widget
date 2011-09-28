@@ -17,9 +17,9 @@
             $('#main_table tbody').append(table_data);
           });
         });
-        $("#loading").css('display', 'none');
-        $("#main_table").colorize({hiliteColor: '#CFCFCF'});  
+        $("#loading").css('display', 'none'); 
         $("#main_table").tablesorter({sortList: [[0,0]]}); //sort table
+        $("#main_table").colorize({hiliteColor: '#CFCFCF'}); 
       });
     };
     return VenueDriver;
