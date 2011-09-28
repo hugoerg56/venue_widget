@@ -35,15 +35,22 @@ var VenueDriver;
     VenueDriver.fill_table = function(data) {
       $('#main_table').append("<tbody></tbody>");
       $.each(data, function(i, item) {
-        var table_data;
         $.each(item.events, function(i, event){
-          table_data = "<tr>                  <td width='92' class='eventitem_text'>" + event.date + "</td>                  <td width='136' calss='eventitem_text'>" + item.venue.city + ", " + item.venue.state +"</td>                  <td width='130' class='eventitem_text'>" + item.venue.title + "</td>                  <td class='eventitem_text'>" + event.title + "</td>                  <td align='right'><a href='" + item.venue.home_URL + "buy/tickets/event/" + event.id + "'>Buy</a></td>                  </tr>";
+          var table_data = "<tr><td width='92' class='eventitem_text'>" + event.date + "</td>  <td width='136' calss='eventitem_text'>" + item.venue.city + ", " + item.venue.state +"</td>  <td width='130' class='eventitem_text'>" + item.venue.title + "</td>  <td class='eventitem_text'>" + event.title + "</td>  <td align='right'><a href='" + urlBuyBtton(event, item)  + "' target='_blank'>Buy</a></td></tr>";
           $('#main_table tbody').append(table_data);
         });
       });
       $("#loading").css('display', 'none'); 
       VenueDriver.style_table();
     };
+    
+    function urlBuyBtton(event, venue){
+      if (event.tickets_URL == null){
+        return "https://ticketdriver.com/" + venue.friendly_id + "/buy/tickets/event/" + event.id
+      }else{
+        return event.tickets_URL;
+      }
+    }
     
     VenueDriver.style_table = function() {
       $("#main_table").tablesorter({sortList: [[0,0]]}); //sort table
