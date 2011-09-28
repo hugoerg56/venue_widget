@@ -5,8 +5,8 @@
 
     //Config
     $(function initialize(){
-      VenueDriver.api_token = "NVJEZ3T8A861Q2";
-      VenueDriver.account = '93';
+      VenueDriver.api_token = VenueConfig.api_token;
+      VenueDriver.account = VenueConfig.account;
       VenueDriver.host = "venuedriver.com";
       VenueDriver.api_url = "http://" + VenueDriver.host + "/api/accounts/" + VenueDriver.account + "/all_events?token=" + VenueDriver.api_token + "&callback=?";
     });
