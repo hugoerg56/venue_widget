@@ -8,3 +8,7 @@ gem 'unicorn'
 gem 'capybara'
 gem "bson_ext", "~> 1.3"
 gem 'mongoid', "~> 2.0"
+
+group :test do
+  gem 'jasmine'
+end
