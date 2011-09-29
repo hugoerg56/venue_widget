@@ -1,5 +1,11 @@
 #wrapper{
-  width: 100%; 
+  width: 80%;
+  margin: 0 auto;
+}
+
+#logo {
+  float: left;
+  margin: 5px 0 15px 60px;
 }
 
 #center_table{
@@ -12,14 +18,63 @@
 }
 
 #main_table tr td{
-  padding: 2px;
+  padding: 7px;
+  font-size: 13px;
+  color: black;
 }
 
 #selectevent_columnlabelbar{
   margin-top: 20px;
+
 }
 
 #selectevent_columnlabelbar table thead{
   background-color: #A9BBD7;
+  font-family: arial;
+  text-align: left;
+  font-weight: lighter;
+  border: #e9eaeb 1px solid;
 }
 
+.eventlist_columnlabels {
+	padding: 7px;
+	color: white;
+	font-weight: lighter;
+	font-family: 'century gothic', 'arial';
+	text-transform: uppercase;
+	background: #1d333f; /* for non-css3 browsers */
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33464f', endColorstr='#1d333f'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#33464f), to(#1d333f)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #33464f,  #1d333f); /* for firefox 3.6+ */ 
+}
+
+tr:nth-child(even) {background: #e9eaeb;}
+tr:nth-child(odd) {background: #FFF}
+
+tr a {
+	color: white;
+	text-decoration: none;
+	padding: 3px 20px;
+	background: #ff9f00; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9f00', endColorstr='#e08500'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff9f00), to(#e08500)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ff9f00,  #e08500); /* for firefox 3.6+ */ 	
+	border-radius: 3px;
+	border: 1px #e08500 solid;
+}
+
+tr a:hover {
+	background: #e08500; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e08500', endColorstr='#ff9f00'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#e08500), to(#ff9f00)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #e08500,  #ff9f00); /* for firefox 3.6+ */ 	
+}
+
+.tablesorter {
+	margin: 0 auto;
+}
+
+.cl{
+  clear: both;  
+}
