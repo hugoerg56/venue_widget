@@ -3,7 +3,6 @@ require 'sinatra'
 require 'json'
 require 'haml'
 require 'uri'
-require 'mongoid'
 
 begin
   # Require the preresolved locked set of gems.
