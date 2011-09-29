@@ -5,15 +5,15 @@ var VenueDriver;
 
   	options = {
   		api_token: "NVJEZ3T8A861Q2",
-      account: "93",
-      div_id: "body"	  
+      account: "93",  
+      div_id: "body"
   	}
   	
     try{
   	  params = {
   		  api_token: VenueConfig.api_token,
         account: VenueConfig.account,
-        div_id: VenueConfig.div_id	
+        div_id: VenueConfig.div_id
   	  };
   	}catch(e){
   	  params = {}
@@ -25,7 +25,8 @@ var VenueDriver;
       VenueDriver.api_token = options.api_token;
       VenueDriver.account = options.account;
       VenueDriver.host = "venuedriver.com";
-      options.div_id = "#" + options.div_id;
+      options.div_id = "#" + options.div_id
+      options.div_id = options.div_id.replace("#body", "body");
       VenueDriver.api_url = "http://" + VenueDriver.host + "/api/accounts/" + VenueDriver.account + "/all_events?token=" + VenueDriver.api_token + "&callback=?";
       VenueDriver.prepare_table();
     });
@@ -47,6 +48,7 @@ var VenueDriver;
     };
     
     VenueDriver.prepare_table = function(){
+      alert(options.div_id);
       $(options.div_id).append("<table id='venueWidgetMainTable'><thead><tr></tr></thead><tbody></tbody></table>");
       $(options.div_id + " tr").append(
               "<th class='eventlist_columnlabels' width='10%'>Date</th>" +
