@@ -48,7 +48,6 @@ var VenueDriver;
     };
     
     VenueDriver.prepare_table = function(){
-      alert(options.div_id);
       $(options.div_id).append("<table id='venueWidgetMainTable'><thead><tr></tr></thead><tbody></tbody></table>");
       $(options.div_id + " tr").append(
               "<th class='eventlist_columnlabels' width='10%'>Date</th>" +
