@@ -12,6 +12,7 @@
 #
 src_files:
     - public/js/lib/jquery.js
+    - **/fixtures/VenueWidgetConfig.js
     - public/js/lib/**/*.js
     - public/js/**/*.js
 

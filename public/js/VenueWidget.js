@@ -6,14 +6,16 @@ var VenueDriver;
   	options = {
   		api_token: "NVJEZ3T8A861Q2",
       account: "93",  
-      div_id: "body"
+      div_id: "body",
+      autostart: true
   	}
   	
     try{
   	  params = {
   		  api_token: VenueConfig.api_token,
         account: VenueConfig.account,
-        div_id: VenueConfig.div_id
+        div_id: VenueConfig.div_id,
+        autostart: VenueConfig.autostart
   	  };
   	}catch(e){
   	  params = {}
@@ -32,15 +34,17 @@ var VenueDriver;
     });
     
     VenueDriver.prototype.start = function(){
-      $.getJSON(VenueDriver.api_url, function(data) { 
-        VenueDriver.fill_table(data);
-      });
+      if(options.autostart == true){
+        $.getJSON(VenueDriver.api_url, function(data) { 
+          VenueDriver.prototype.fill_table(data);
+        });
+      }
     };
     
-    VenueDriver.fill_table = function(data) {
+    VenueDriver.prototype.fill_table = function(data) {
       $.each(data, function(i, item) {
         $.each(item.events, function(i, event){
-          var table_data = "<tr class='eventitem_row'><td width='92' class='eventitem_text'>" + event.date + "</td>  <td width='136' calss='eventitem_text'>" + item.venue.city + ", " + item.venue.state +"</td>  <td width='130' class='eventitem_text'>" + item.venue.title + "</td>  <td class='eventitem_text'>" + event.title + "</td>  <td align='right'><a href='" + urlBuyBtton(event, item)  + "' target='_blank'>Buy</a></td></tr>";
+          var table_data = "<tr class='eventitem_row'><td width='92' class='eventitem_text column1'>" + event.date + "</td>  <td width='136' class='eventitem_text column2'>" + item.venue.city + ", " + item.venue.state +"</td>  <td width='130' class='eventitem_text column3'>" + item.venue.title + "</td>  <td class='eventitem_text column4'>" + event.title + "</td>  <td class='column5' align='right'><a href='" + urlBuyBtton(event, item)  + "' target='_blank'>Buy</a></td></tr>";
           $('#venueWidgetMainTable tbody').append(table_data);
         });
       });
@@ -48,6 +52,7 @@ var VenueDriver;
     };
     
     VenueDriver.prepare_table = function(){
+      $(options.div_id).append("<div id='loading'><img src='/images/ajax-loader.gif'/></div>")
       $(options.div_id).append("<table id='venueWidgetMainTable'><thead><tr></tr></thead><tbody></tbody></table>");
       $(options.div_id + " tr").append(
               "<th class='eventlist_columnlabels' width='10%'>Date</th>" +
