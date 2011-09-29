@@ -54,7 +54,6 @@ var VenueDriver;
     
     VenueDriver.style_table = function() {
       $("#main_table").tablesorter({sortList: [[0,0]]}); //sort table
-      $("#main_table").colorize({hiliteColor: '#CFCFCF'});
     };
     
     return VenueDriver;
