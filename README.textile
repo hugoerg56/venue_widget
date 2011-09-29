@@ -1,0 +1,39 @@
+h1. VenueWidget
+===========
+
+h2. Requirements
+--------
+
+* To use VenueWidget need last jQuery lib version from http://code.jquery.com/jquery.min.js
+* Put the jquery.min.js file on to HTML document
+
+
+h2.  How to Install
+--------
+
+* Make sure you have jQuery lib added
+* You need to set a couple of parameters api_token(your secret api token), account(your account id number) & div_id(the name of div where you draw the table)
+* Put the VenueWidget.js file on to HTML document
+
+* The code should look like that:
+
+<pre>
+<code>
+<html>
+  <head>
+    <script src="jquery.min.js" charset="utf-8"></script>
+    <script> 
+      VenueConfig = new Object();
+      VenueConfig.api_token = "HERE_YOUR_API_TOKEN";  //example '02AFRET3T6A961Q53'
+      VenueConfig.account = 'HERE_YOUR_ACCOUNT_ID';  //example '12345'
+      VenueConfig.div_id = 'HERE_ID_OF_DIV_WHERE_YOU_DRAW_THE_TABLE'; //example 'my_div'
+    </script>
+    <script src="VenueWidget.js" charset="utf-8"></script>
+  </head>
+</html>
+</code>
+</pre>
+
+
+
+
