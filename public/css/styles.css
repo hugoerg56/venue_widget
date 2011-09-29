@@ -19,7 +19,7 @@
   margin-top: 20px;
 }
 
-#selectevent_columnlabelbar table{
+#selectevent_columnlabelbar table thead{
   background-color: #A9BBD7;
 }
 
