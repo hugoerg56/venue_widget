@@ -1,7 +1,0 @@
-test:
-  host: localhost
-  database: venuewidget_test
-
-development:
-  host: localhost
-  database: venuewidget_development

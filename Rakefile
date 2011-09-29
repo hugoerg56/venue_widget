@@ -1,5 +1,3 @@
-# Rakefile
-require File.dirname(__FILE__) + '/config/boot.rb'
 require 'rubygems'
 
 begin

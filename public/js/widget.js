@@ -36,13 +36,16 @@ var VenueDriver;
       $('#main_table').append("<tbody></tbody>");
       $.each(data, function(i, item) {
         $.each(item.events, function(i, event){
-          var table_data = "<tr><td width='92' class='eventitem_text'>" + event.date + "</td>  <td width='136' calss='eventitem_text'>" + item.venue.city + ", " + item.venue.state +"</td>  <td width='130' class='eventitem_text'>" + item.venue.title + "</td>  <td class='eventitem_text'>" + event.title + "</td>  <td align='right'><a href='" + urlBuyBtton(event, item)  + "' target='_blank'>Buy</a></td></tr>";
+          var table_data = "<tr class='eventitem_row'><td width='92' class='eventitem_text'>" + event.date + "</td>  <td width='136' calss='eventitem_text'>" + item.venue.city + ", " + item.venue.state +"</td>  <td width='130' class='eventitem_text'>" + item.venue.title + "</td>  <td class='eventitem_text'>" + event.title + "</td>  <td align='right'><a href='" + urlBuyBtton(event, item)  + "' target='_blank'>Buy</a></td></tr>";
           $('#main_table tbody').append(table_data);
         });
       });
-      $("#loading").css('display', 'none'); 
-      VenueDriver.style_table();
+      toggle_loading();
     };
+    
+    function toggle_loading(){
+      $("#loading").toggle();
+    }
     
     function urlBuyBtton(event, venue){
       if (event.tickets_URL == null){
@@ -51,17 +54,12 @@ var VenueDriver;
         return event.tickets_URL;
       }
     }
-    
-    VenueDriver.style_table = function() {
-      $("#main_table").tablesorter({sortList: [[0,0]]}); //sort table
-      $("#main_table").colorize({hiliteColor: '#CFCFCF'});
-    };
+  
     
     return VenueDriver;
   })();
   $(function() {
-    var venuedriver;
-    venuedriver = new VenueDriver;
-    return console.log(venuedriver.start());
+    var venuedriver = new VenueDriver;
+    return venuedriver.start();
   });
 }).call(this);
